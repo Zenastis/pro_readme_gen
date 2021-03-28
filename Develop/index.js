@@ -27,15 +27,40 @@ const questions = [{
 {
     
     type: 'input',
-    name: 'name',
-    message: 'What is your name?',
+    name: 'contents',
+    message: 'What is in your table of contents',
 },
-// {
+{
     
-//     type: 'input',
-//     name: 'name',
-//     message: 'What is your name?',
-// }    
+    type: 'input',
+    name: 'installation',
+    message: 'How would you install',
+},
+{
+    type: 'input',
+    name: 'usage',
+    message: 'Enter the usage information of your project',
+},
+{
+    type: 'input',
+    name: 'license',
+    message: 'What licenses did you use',
+},
+{
+    type: 'input',
+    name: 'contributing',
+    message: 'Who are the contributors to your project',
+},
+{
+    type: 'input',
+    name: 'tests',
+    message: 'How did you test your project',
+},
+{
+    type: 'input',
+    name: 'questions',
+    message: 'What questions do you have about the project',
+}    
 ];
 
 // TODO: Create a function to write README file
