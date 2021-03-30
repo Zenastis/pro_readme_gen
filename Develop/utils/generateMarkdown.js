@@ -10,19 +10,30 @@
 
 
 function renderLicenseBadge(license) {
-  if (renderLicenseBadge)
-  console.log("license");
-  } else {
-  console.log("null");
+  if (license !== 'None')
+  return `![License](https://img.shields.io/badge/License-${license}-blue.svg)`
+
+  return ""
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    return `[License](#license)`;
+  }
+	
+  return '';
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+    return `## License
+​
+	This project is licensed under the ${license} license.`;
+}}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -31,6 +42,10 @@ function generateMarkdown(data) {
 ${data.description}
 ## name
 ${data.name}
+## licence
+${renderLicenseBadge(data.license)}
+${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
 `;
 }
 

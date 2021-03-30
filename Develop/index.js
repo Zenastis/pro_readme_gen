@@ -43,11 +43,6 @@ const questions = [{
 },
 {
     type: 'input',
-    name: 'license',
-    message: 'What licenses did you use',
-},
-{
-    type: 'input',
     name: 'contributing',
     message: 'Who are the contributors to your project',
 },
@@ -60,7 +55,13 @@ const questions = [{
     type: 'input',
     name: 'questions',
     message: 'What questions do you have about the project',
-}    
+},
+{
+    type: 'list',
+    name: 'license',
+    message: 'What kind of license should your project have?',
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+}  
 ];
 
 // TODO: Create a function to write README file
